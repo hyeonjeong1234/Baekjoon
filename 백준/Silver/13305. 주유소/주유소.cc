@@ -6,22 +6,22 @@ using namespace std;
 
 int main()
 {
-	unsigned int n,dis,val,min, result=0;
-	vector<unsigned int> dis_arr;
-	vector<unsigned int> val_arr;
+	long long n,dis,val,min, result=0;
+	vector<long long> dis_arr;
+	vector<long long> val_arr;
 	cin >> n;
-	for (unsigned int i = 0; i < n-1; i++)
+	for( long long i = 0; i < n-1; i++)
 	{
 		cin>>dis;
 		dis_arr.push_back(dis);
 	}
-	for (unsigned int i = 0; i < n; i++)
+	for (long long i = 0; i < n; i++)
 	{
 		cin>>val;
 		val_arr.push_back(val);
 	}
 	min = val_arr[0];
-	for (unsigned int i = 0; i < n; i++)//0번노드를 최소값으로 생각하고 앞에 더 가격이싼 노드가 있으면 최소를 바꿈
+	for (long long i = 0; i < n; i++)//0번노드를 최소값으로 생각하고 앞에 더 가격이싼 노드가 있으면 최소를 바꿈
 	{
 		if (min > val_arr[i])
 		{
