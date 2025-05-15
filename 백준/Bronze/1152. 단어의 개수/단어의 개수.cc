@@ -1,23 +1,21 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
 
 int main()
-{
+ {
     char sentence[1000001];
-    int result = 0;
     scanf("%[^\n]s", sentence);
-   // printf("%s\n", sentence);
     char* word;
+    int result = 0;
     word = strtok(sentence, " ");
-    result++;
     while (word != NULL)
     {
+        if (word != "\n")
+            result++;
         word = strtok(NULL, " ");
-       // printf("%s\n", word);
-        result++;
     }
-    printf("%d", result-1);
+    printf("%d", result);
+    fflush(stdin);
     return 0;
 }
