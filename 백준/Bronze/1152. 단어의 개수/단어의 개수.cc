@@ -5,13 +5,13 @@
 int main()
  {
     char sentence[1000001];
-    scanf("%[^\n]s", sentence);
+    fgets(sentence,sizeof(sentence),stdin);
     char* word;
     int result = 0;
     word = strtok(sentence, " ");
     while (word != NULL)
     {
-        if (word != "\n")
+        if (*word != '\n')
             result++;
         word = strtok(NULL, " ");
     }
