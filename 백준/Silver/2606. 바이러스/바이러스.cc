@@ -10,7 +10,6 @@ int main()
     vector<vector<int>> arr(N+1);
     vector<bool> visited(N + 1,0);
     queue<int> search;
-    vector<int> nodes;
     for (int i = 0; i < pair; i++)
     {
         int a, b;
@@ -20,7 +19,6 @@ int main()
     }
     search.push(1);
     visited[1] = 1;
-    nodes.push_back(1);
     while (!search.empty())
     {
         int thisnode = search.front();
@@ -34,7 +32,6 @@ int main()
                     visited[arr[thisnode][i]] = 1;
                     search.push(arr[thisnode][i]);
                     virus++;
-                    nodes.push_back(arr[thisnode][i]);
                    
                 }
             }
